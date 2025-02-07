@@ -69,6 +69,17 @@ body {
   width: 300px;
   padding: 20px;
   background-color: #fff;
+
+  /* Animacion para el color de fondo en degradado */
+  background: linear-gradient(
+    334deg,
+    hsl(0, 0%, 100%),
+    hsl(48, 100%, 90%),
+    hsl(47, 88%, 63%)
+  );
+
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
   border-radius: 10px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 }
