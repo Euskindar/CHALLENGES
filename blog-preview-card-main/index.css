@@ -5,7 +5,7 @@ body {
   /* Animacion para el color de fondo en degradado */
   background: linear-gradient(
     334deg,
-    hsl(47, 88%, 63%),
+    hsl(47, 100%, 50%),
     hsl(48, 100%, 90%),
     hsl(0, 0%, 100%)
   );
@@ -21,6 +21,7 @@ body {
   align-content: center;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
   /* Para aplicar el footer a la parte inferior */
   min-height: 100vh;
@@ -55,33 +56,94 @@ body {
   }
 }
 
+/* Resumiendo propiedades comunes */
+.main-content,
+.box,
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .main-content {
   /* Ocupa el hueco restante de la pantalla */
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   padding: 20px;
 }
 
-.card {
-  width: 300px;
+.box {
+  min-height: 70vh;
+  width: 80%;
   padding: 20px;
-  background-color: #fff;
 
   /* Animacion para el color de fondo en degradado */
   background: linear-gradient(
     334deg,
     hsl(0, 0%, 100%),
     hsl(48, 100%, 90%),
-    hsl(47, 88%, 63%)
+    hsl(47, 100%, 50%)
   );
 
   background-size: 180% 180%;
   animation: gradient-animation 6s ease infinite;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  width: 300px;
+  padding: 25px 12px 0 12px;
+
+  background-color: white;
+
+  border: 1px solid black;
+  border-radius: 15px;
+
+  box-shadow: 10px 10px 0 rgba(0, 0, 0);
+
+  overflow: hidden;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  /* Para centrar la imagen */
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.underbox {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: rgb(255, 208, 0);
+}
+
+.card-text {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.card .card-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px 0px;
+  border-top: 1px solid #ccc;
+}
+
+.card .card-footer img {
+  width: 32px;
+  border-radius: 16px;
+  margin: 0 10px 0 0;
+}
+
+.card .card-footer a {
+  vertical-align: middle;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 footer {
